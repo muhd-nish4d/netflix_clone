@@ -5,7 +5,8 @@ import '../../../core/colors/colors.dart';
 
 class WidgetMediaNewHot extends StatelessWidget {
   const WidgetMediaNewHot({
-    super.key, required this.image,
+    super.key,
+    required this.image,
   });
   final String image;
 

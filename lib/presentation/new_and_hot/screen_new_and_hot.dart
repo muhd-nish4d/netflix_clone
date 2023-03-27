@@ -47,11 +47,10 @@ class ScreenNewAndHot extends StatelessWidget {
                       text: '👀 Everyones Watching',
                     )
                   ])),
-          body:const TabBarView(children: [
+          body: const TabBarView(children: [
             WidgetBuildComingSoon(),
             WidgetBuildEveriyone(),
           ])),
     );
   }
-
 }

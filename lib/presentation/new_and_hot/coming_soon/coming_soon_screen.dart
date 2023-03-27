@@ -8,13 +8,12 @@ class WidgetBuildComingSoon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      shrinkWrap: true,
-      children: List.generate(10, (index) => const WidgetComingSoonContent())
-      // [
-      //   kHeight,
-      //   WidgetComingSoonContent()
-      // ],
-    );
+        shrinkWrap: true,
+        children: List.generate(10, (index) => const WidgetComingSoonContent())
+        // [
+        //   kHeight,
+        //   WidgetComingSoonContent()
+        // ],
+        );
   }
 }
-

@@ -30,7 +30,7 @@ class ScreenMainPage extends StatelessWidget {
           },
         ),
       ),
-      bottomNavigationBar:const BottomNavigatioWidgets(),
+      bottomNavigationBar: const BottomNavigatioWidgets(),
     );
   }
 }

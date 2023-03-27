@@ -39,8 +39,6 @@ class WidgetSearchIdle extends StatelessWidget {
   }
 }
 
-
-
 class TopSearchItemTile extends StatelessWidget {
   const TopSearchItemTile({super.key});
 
@@ -63,7 +61,11 @@ class TopSearchItemTile extends StatelessWidget {
           'Movie Name',
           style: TextStyle(color: kWhiteColor, fontWeight: FontWeight.bold),
         )),
-        const Icon(CupertinoIcons.play_circle,color: kWhiteColor,size: 45,)
+        const Icon(
+          CupertinoIcons.play_circle,
+          color: kWhiteColor,
+          size: 45,
+        )
       ],
     );
   }

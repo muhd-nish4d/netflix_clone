@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:netflix_clone/core/constants.dart';
+import 'package:netflix_clone/presentation/search/widgets/search_idle.dart';
 import 'package:netflix_clone/presentation/search/widgets/search_result.dart';
 
 class ScreenSearch extends StatelessWidget {
@@ -11,7 +12,7 @@ class ScreenSearch extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
             padding: const EdgeInsets.all(10.0),
@@ -29,7 +30,7 @@ class ScreenSearch extends StatelessWidget {
             ),
           ),
           kHeight,
-          const Expanded(child:  WigetSearchResult())
+          const Expanded(child: WidgetSearchIdle())
         ],
       )),
     );

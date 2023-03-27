@@ -23,8 +23,11 @@ class WidgetNumberCardTop extends StatelessWidget {
           maxHeight: 230,
           child: ListView(
             scrollDirection: Axis.horizontal,
-            children:
-                List.generate(10, (index) =>  WidgetNumberCard(index: index,)),
+            children: List.generate(
+                10,
+                (index) => WidgetNumberCard(
+                      index: index,
+                    )),
           ),
         )
       ],

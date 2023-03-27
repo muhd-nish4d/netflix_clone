@@ -13,12 +13,11 @@ class WidgetEveryounesMedia extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      child:
-          Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         kHeight,
         const Text(
           'Friends',
-          style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
         ),
         kHeight,
         const Text(
@@ -39,10 +38,7 @@ class WidgetEveryounesMedia extends StatelessWidget {
                 iconSize: 30),
             kWidth,
             customButtonWidget(
-                icon: Icons.add,
-                title: 'My List',
-                textSize: 10,
-                iconSize: 30),
+                icon: Icons.add, title: 'My List', textSize: 10, iconSize: 30),
             kWidth,
             customButtonWidget(
                 icon: Icons.play_arrow_rounded,

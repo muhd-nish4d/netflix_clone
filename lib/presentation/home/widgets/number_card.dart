@@ -33,15 +33,20 @@ class WidgetNumberCard extends StatelessWidget {
             ],
           ),
           Positioned(
-            left: 5,
-            bottom:- 28,
+              left: 5,
+              bottom: -28,
               child: BorderedText(
                 strokeWidth: 5,
                 strokeColor: kWhiteColor,
                 child: Text(
-                          "${index + 1}",
-                          style: TextStyle(fontSize: 100,decoration: TextDecoration.none,color: kBlackColor,fontWeight: FontWeight.w900,fontFamily: GoogleFonts.anton().fontFamily),
-                        ),
+                  "${index + 1}",
+                  style: TextStyle(
+                      fontSize: 100,
+                      decoration: TextDecoration.none,
+                      color: kBlackColor,
+                      fontWeight: FontWeight.w900,
+                      fontFamily: GoogleFonts.anton().fontFamily),
+                ),
               ))
         ],
       ),

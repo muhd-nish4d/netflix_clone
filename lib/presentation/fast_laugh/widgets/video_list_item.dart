@@ -39,7 +39,9 @@ class VideoListItem extends StatelessWidget {
                   children: const [
                     CircleAvatar(
                       radius: 30,
-                      backgroundImage: NetworkImage("https://www.themoviedb.org/t/p/w355_and_h200_multi_faces/qqhzXiNyCotzJdyEbi41EtzYYYI.jpg",),
+                      backgroundImage: NetworkImage(
+                        "https://www.themoviedb.org/t/p/w355_and_h200_multi_faces/qqhzXiNyCotzJdyEbi41EtzYYYI.jpg",
+                      ),
                     ),
                     kHeight,
                     WidgetVideoActions(
@@ -74,7 +76,6 @@ class WidgetVideoActions extends StatelessWidget {
             icon,
             color: kWhiteColor,
             size: 30,
-            
           ),
           Text(
             title,

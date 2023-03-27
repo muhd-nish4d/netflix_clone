@@ -41,7 +41,7 @@ class MainCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(7),
+          borderRadius: BorderRadius.circular(7),
           image: const DecorationImage(
               image: NetworkImage(imageLink), fit: BoxFit.cover)),
     );
