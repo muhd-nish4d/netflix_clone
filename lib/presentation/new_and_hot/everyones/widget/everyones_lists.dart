@@ -21,17 +21,19 @@ class WidgetEveryounesMedia extends StatelessWidget {
     return SizedBox(
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         kHeight,
-        const Text(
-          'Friends',
+         Text(
+          movieName,
           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
         ),
         kHeight,
-        const Text(
-          'This his sitcom follows the many misadventures of six\n20-something also as they navigate the paitfalls of\nwork, life and love in 1990s Manhattan.',
+         Text(
+          description,
+          maxLines: 4,
+          overflow: TextOverflow.ellipsis,
           style: TextStyle(color: kGreyColor),
         ),
         kHeight50,
-        const WidgetMediaNewHot(image: kEveryouneWatch),
+         WidgetMediaNewHot(image: posterPath,),
         Row(
           // mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [

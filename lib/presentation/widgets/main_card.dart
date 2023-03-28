@@ -2,8 +2,9 @@ import 'package:flutter/cupertino.dart';
 import '../../core/constants.dart';
 
 class MainCardForHome extends StatelessWidget {
+  final String imageUrl;
   const MainCardForHome({
-    super.key,
+    super.key, required this.imageUrl,
   });
 
   @override
@@ -15,10 +16,10 @@ class MainCardForHome extends StatelessWidget {
         // height: 230,
         decoration: BoxDecoration(
             borderRadius: kRadius10,
-            image: const DecorationImage(
+            image: DecorationImage(
                 fit: BoxFit.cover,
                 image: NetworkImage(
-                  'https://m.media-amazon.com/images/M/MV5BZTIwMTFhNzEtNjYyMC00YTYzLWJlODItZGQxZDg5MjEyMGMyXkEyXkFqcGdeQXVyMTYxNDU3NTQy._V1_FMjpg_UX1000_.jpg',
+                  imageUrl
                 ))),
       ),
     );

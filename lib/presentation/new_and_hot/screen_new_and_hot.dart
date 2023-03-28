@@ -51,7 +51,7 @@ class ScreenNewAndHot extends StatelessWidget {
                   ])),
           body: const TabBarView(children: [
             WidgetBuildComingSoon(key: Key('coming_soon')),
-            WidgetBuildEveriyone(),
+            WidgetBuildEveriyone(key: Key('everyone_is_watching'),),
           ])),
     );
   }

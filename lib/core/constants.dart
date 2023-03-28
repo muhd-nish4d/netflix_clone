@@ -25,7 +25,6 @@ const kComingSoon =
     'https://m.media-amazon.com/images/M/MV5BMjY5OTljZjEtZjE4OC00OTNjLTkwMzItN2Q1NmRmYjMwY2U5XkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_FMjpg_UX1000_.jpg';
 //New & Hot Everyounes Watching
 const kEveryouneWatch =
-    'https://m.media-amazon.com/images/M/MV5BYzAxODcwNWMtMWY4Mi00Y2RiLTgyYmMtZmJmOGEwZWQyNzRkXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg';
-
+    'https://m.media-amazon.com/images/M/MV5BMjY5OTljZjEtZjE4OC00OTNjLTkwMzItN2Q1NmRmYjMwY2U5XkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_FMjpg_UX1000_.jpg';
 //TextStyle
 const kTextStyle = TextStyle(fontWeight: FontWeight.bold, fontSize: 16);

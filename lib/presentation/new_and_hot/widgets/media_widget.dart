@@ -19,6 +19,16 @@ class WidgetMediaNewHot extends StatelessWidget {
           height: 200,
           child: Image.network(
             image,
+            loadingBuilder: (context, child, loadingProgress) {
+            return child;
+          },
+          errorBuilder: (context, error, stackTrace) {
+            if(stackTrace == null){
+              return Center(child: Icon(Icons.wifi_off_rounded,color: Colors.white,));
+            }else{
+              return const Center(child: CircularProgressIndicator(),);
+            }
+          },
             fit: BoxFit.cover,
           ),
         ),
