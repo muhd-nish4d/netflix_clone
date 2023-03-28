@@ -6,7 +6,9 @@ import 'package:netflix_clone/presentation/new_and_hot/coming_soon/coming_soon_s
 import 'package:netflix_clone/presentation/new_and_hot/everyones/everyones_screen.dart';
 
 class ScreenNewAndHot extends StatelessWidget {
-  const ScreenNewAndHot({super.key});
+  const ScreenNewAndHot({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +50,7 @@ class ScreenNewAndHot extends StatelessWidget {
                     )
                   ])),
           body: const TabBarView(children: [
-            WidgetBuildComingSoon(),
+            WidgetBuildComingSoon(key: Key('coming_soon')),
             WidgetBuildEveriyone(),
           ])),
     );

@@ -10,7 +10,7 @@ import 'package:netflix_clone/presentation/search/widgets/search_result.dart';
 class ScreenSearch extends StatelessWidget {
   ScreenSearch({super.key});
 
-  final _debouncer=Debouncer(milliseconds: 1*1000);
+  final _debouncer = Debouncer(milliseconds: 1 * 1000);
 
   @override
   Widget build(BuildContext context) {
@@ -26,14 +26,13 @@ class ScreenSearch extends StatelessWidget {
             padding: const EdgeInsets.all(10.0),
             child: CupertinoSearchTextField(
               onChanged: (value) {
-                if(value.isEmpty){
+                if (value.isEmpty) {
                   return;
                 }
                 _debouncer.run(() {
                   BlocProvider.of<SearchBloc>(context)
-                    .add(SearchMovie(movieQuery: value));
+                      .add(SearchMovie(movieQuery: value));
                 });
-                
               },
               backgroundColor: Colors.grey.withOpacity(0.3),
               prefixIcon: const Icon(

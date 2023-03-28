@@ -1,19 +1,58 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:intl/intl.dart';
+import 'package:netflix_clone/core/strings.dart';
 import 'package:netflix_clone/presentation/new_and_hot/coming_soon/widget/coming_soon_lists.dart';
+
+import '../../../application/hot_and_new/hot_and_new_bloc.dart';
 
 class WidgetBuildComingSoon extends StatelessWidget {
   const WidgetBuildComingSoon({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-        shrinkWrap: true,
-        children: List.generate(10, (index) => const WidgetComingSoonContent())
-        // [
-        //   kHeight,
-        //   WidgetComingSoonContent()
-        // ],
-        );
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      BlocProvider.of<HotAndNewBloc>(context).add(const LoadDataInComingSoon());
+    });
+    return BlocBuilder<HotAndNewBloc, HotAndNewState>(
+      builder: (context, state) {
+        if (state.isLoading) {
+          return const Center(
+            child: CircularProgressIndicator(
+              strokeWidth: 2,
+            ),
+          );
+        } else if (state.hasError) {
+          return const Center(
+            child: Text('Error while loading coming soon list'),
+          );
+        } else if (state.comingSoonList.isEmpty) {
+          return const  Center(
+            child: Text('Coming soon list is empty'),
+          );
+        } else {
+          return ListView.builder(
+            itemCount: state.comingSoonList.length,
+            itemBuilder: (context, index) {
+              final movie = state.comingSoonList[index];
+              if (movie.id == null) {
+                return const SizedBox();
+              }
+              final _date =DateTime.parse(movie.releaseDate!);
+              final formatedDate = DateFormat.yMMMMd('en_US').format(_date);
+              print(formatedDate);
+              return WidgetComingSoonContent(
+                  id: movie.id.toString(),
+                  month: formatedDate.split(' ').first.substring(0,3).toUpperCase(),
+                  day: movie.releaseDate!.split('-')[1],
+                  posterPath: '$imageAppendUrl${movie.posterPath}',
+                  movieName: movie.originalTitle ?? 'No title',
+                  description: movie.overview ?? 'No description');
+            },
+          );
+        }
+      },
+    );
   }
 }

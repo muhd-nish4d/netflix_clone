@@ -19,7 +19,7 @@ class SearchImp implements SearchService {
     try {
       final Response response = await Dio(BaseOptions())
           .get(ApiEndPoints.search, queryParameters: {'query': movieQuery});
-          // log(response.data.toString());
+      // log(response.data.toString());
       if (response.statusCode == 200 || response.statusCode == 201) {
         final result = SearchResponse.fromJson(response.data);
         return Right(result);

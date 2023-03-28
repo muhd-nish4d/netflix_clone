@@ -6,8 +6,14 @@ import '../../../home/widgets/custom_button.dart';
 import '../../widgets/media_widget.dart';
 
 class WidgetEveryounesMedia extends StatelessWidget {
+  final String posterPath;
+  final String movieName;
+  final String description;
   const WidgetEveryounesMedia({
     super.key,
+    required this.posterPath,
+    required this.movieName,
+    required this.description,
   });
 
   @override

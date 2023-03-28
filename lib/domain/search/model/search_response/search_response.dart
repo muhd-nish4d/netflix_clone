@@ -8,7 +8,7 @@ class SearchResponse {
   List<SearchResultData> results;
 
   SearchResponse({
-  this.results =const [],
+    this.results = const [],
   });
 
   factory SearchResponse.fromJson(Map<String, dynamic> json) {
@@ -28,7 +28,7 @@ class SearchResultData {
   @JsonKey(name: 'poster_path')
   String? posterPath;
 
-  String get posterImageUrl =>'$imageAppendUrl$posterPath';
+  String get posterImageUrl => '$imageAppendUrl$posterPath';
 
   SearchResultData({
     this.id,

@@ -30,7 +30,7 @@ class WigetSearchResult extends StatelessWidget {
                 crossAxisCount: 3,
                 children: List.generate(20, (index) {
                   final movie = state.searchResultList[index];
-                  return  MainCard(imageUrl: movie.posterImageUrl);
+                  return MainCard(imageUrl: movie.posterImageUrl);
                 }),
               );
             },
@@ -50,7 +50,7 @@ class MainCard extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(7),
-          image:  DecorationImage(
+          image: DecorationImage(
               image: NetworkImage(imageUrl), fit: BoxFit.cover)),
     );
   }

@@ -8,8 +8,20 @@ import '../../../home/widgets/custom_button.dart';
 import '../../widgets/media_widget.dart';
 
 class WidgetComingSoonContent extends StatelessWidget {
+  final String id;
+  final String month;
+  final String day;
+  final String posterPath;
+  final String movieName;
+  final String description;
   const WidgetComingSoonContent({
     super.key,
+    required this.id,
+    required this.month,
+    required this.day,
+    required this.posterPath,
+    required this.movieName,
+    required this.description,
   });
 
   @override
@@ -25,17 +37,17 @@ class WidgetComingSoonContent extends StatelessWidget {
               height: 420,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
-                children: const [
+                children:  [
                   Text(
-                    'FEB',
-                    style: TextStyle(
+                    month,
+                    style:const TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                         color: kGreyColor),
                   ),
                   Text(
-                    '11',
-                    style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+                    day,
+                    style:const TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
                   )
                 ],
               ),
@@ -47,18 +59,22 @@ class WidgetComingSoonContent extends StatelessWidget {
                 // mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const WidgetMediaNewHot(image: kComingSoon),
+                   WidgetMediaNewHot(image: posterPath),
                   kHeight20,
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                        'TALLGIRL2',
-                        style: TextStyle(
-                            fontSize: 25,
-                            fontWeight: FontWeight.bold,
-                            fontFamily:
-                                GoogleFonts.permanentMarker().fontFamily),
+                      Expanded(
+                        child: Text(
+                        movieName,
+                        maxLines: 1,
+                        overflow: TextOverflow.clip,
+                          style: TextStyle(
+                              fontSize: 25,
+                              fontWeight: FontWeight.bold,
+                              fontFamily:
+                                  GoogleFonts.permanentMarker().fontFamily),
+                        ),
                       ),
                       Row(
                         children: [
@@ -79,19 +95,21 @@ class WidgetComingSoonContent extends StatelessWidget {
                     ],
                   ),
                   kHeight,
-                  const Text('Coming on Friday'),
+                   Text('Coming on $day $month'),
                   Image.network(
                     'https://cdn-icons-png.flaticon.com/128/5977/5977590.png',
                     width: 30,
                   ),
-                  const Text(
-                    'Tall Girl 2',
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                   Text(
+                    movieName,
+                    style:const TextStyle(fontWeight: FontWeight.bold),
                   ),
                   kHeight,
-                  const Text(
-                    "Landing the lead in the school musical is a\ndream come true for jodi, until the pressure\nsends her confidence - and her relationship -\ninto a tailspin",
-                    style: TextStyle(color: kGreyColor),
+                   Text(
+                    description,
+                    maxLines: 4,
+                    overflow: TextOverflow.ellipsis,
+                    style:const TextStyle(color: kGreyColor),
                   )
                 ],
               ),

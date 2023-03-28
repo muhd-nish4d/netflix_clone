@@ -9,7 +9,7 @@ class WidgetBuildEveriyone extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       padding: const EdgeInsets.all(8),
-      children: List.generate(10, (index) => const WidgetEveryounesMedia()),
+      // children: List.generate(10, (index) => const WidgetEveryounesMedia()),
       // children: [
       //   WidgetEveryounesMedia()
       // ],
